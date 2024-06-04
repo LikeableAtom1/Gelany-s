@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin:0px;
+    padding:0px;
+}
+.logo{
+  position: absolute;
+}
+.contenedor{
+    background-color: blue;
+    width: 100%;
+    margin: 0 auto;
+}
+header {
+  height: 64px;
+  background: #000;
+  color: #FFF;
+  display: flex;
+  justify-content: space-between;
+}
+
+#btn-menu {
+  display: none;
+}
+
+header label {
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+.menu ul {
+  background: #000;
+  display: flex;
+  list-style: none;
+}
+
+.menu ul ul {
+  display: none;
+}
+
+.menu a {
+  display: block;
+  padding: 15px 20px;
+  color: #FFF;
+  text-decoration: none;
+  line-height: 32px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+}
+
+.menu a:hover {
+  background: #2C3E50;
+}
+
+.menu a i {
+  margin-left: 10px;
+}
+
+.menu ul li:hover ul {
+  transition: all 0.3s ease;
+  display: block;
+  position: absolute;
+}
+.section2{
+    background-color: gray;
+}
+.slider-box{
+    width: 100%;
+    height: auto;
+    margin: 0px auto 0;
+    overflow: hidden;
+}
+.slider-box img{
+    width: 100%;
+}
+.slider-box ul{
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: slide 20s infinite alternate ease-in-out;
+}
+.slider-box li{
+    width: 100%;
+    list-style: none;
+}
+.introduccion{
+    left: 0;
+    right: 0;
+    position: absolute;
+    top: 400px;
+    color: white;
+    text-shadow: 5px 5px 2px black;
+    text-align: center;
+    font-family: "Kanit", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 200%;
+    margin-left: auto;
+    margin-right: auto;
+  
+  }
+@keyframes slide {
+    0% { margin-left: 0;}
+    20% { margin-left: 0;}
+
+    25% { margin-left: -100%;}
+    45% { margin-left: -100%;}
+
+    50% { margin-left: -200%;}
+    70% { margin-left: -200%;}
+
+    75% { margin-left: -300%;}
+    100% { margin-left: -300%;}
+}
+@media(max-width:991px){
+.section2{padding: 30px;}
+.slider-box{
+    width: 100%;
+}
+.introduccion{
+    font-size: 10px;
+    margin-bottom: 15px;
+    padding: 0 0;
+    top: 200px;
+    z-index: 0;
+}
+}
+@media (max-width: 768px) {
+    header label {
+      display: block;
+      padding-top: 16px;
+      padding-right: 16px;
+      transition: all 0.4s ease;
+    }
+    
+    .menu {
+      position: absolute;
+      top: 64px;
+      left: 0;
+      width: 70%;
+      transform: translateX(-100%);
+      transition: all 0.3s;
+    }
+    
+    .menu ul {
+      flex-direction: column;
+      display: block;
+    }
+    
+    .menu ul li:hover ul {
+      display: none;
+      position: static;
+    }
+    
+    .menu a i {
+      position: absolute;
+      right: 16px;
+      line-height: 32px;
+    }
+    
+    #btn-menu:checked ~ .menu {
+      transform: translateX(0%);
+    }
+
+}
+.sectionintro{
+
+  padding: 10px;
+
+  
+
+}
+.contexto{
+  width: 65%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2em;
+  margin: 0 auto 0;
+}
+.textointro{
+  display: grid;
+  padding: 5px;
+  width: 45%;
+  min-width: 200px;
+  float: left;
+  margin: 0 auto 0;
+  gap: 1em;
+}
+.el1{
+  align-self: start;
+  text-align: left;
+  padding-top: 50px;
+}
+.el2{
+  align-self: center;
+  text-align: justify;
+}
+.imgintro{
+  width: 50%;
+
+}
+.imgintro img{
+  width: 100%;
+  min-width: 300px;
+  height: auto;
+  padding: 10px;
+  margin: 0 auto 0;
+  display: block;
+}
+.sectioninfo{
+  padding-top: 50px;
+  width: 65%;
+  display: grid;
+  grid-template-rows: 50px auto;
+  margin: 0 auto 0;
+  gap: 3em;
+  bottom: 50px;
+}
+.sectioninfo p{
+  text-align: justify;
+}
+.dinos{
+  padding-top: 50px;
+  top: 100px;
+  width: 65%;
+  display: grid;
+  grid-template-rows: auto auto;
+  margin: 0 auto 0;
+  justify-content: center;
+  gap: 1em;
+}
+.dinos h1{
+  text-align: center;
+}
+.dinos p{
+  text-align: justify;
+}
+.sectiongaleria{
+  width: 65%;
+  display: flex;
+  margin: 0 auto 0;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+}
+.sectiongaleria div{
+  display: block;
+  width: 30%;
+  min-width: 300px;
+  padding: 10px;
+  margin: 0 auto 0;
+}
+.dino1{
+  width: 30%;
+  margin: 0 auto 0;
+  padding-bottom: 200px;
+}
+.dino1 div img{
+  width: auto;
+  height: 300px;
+  margin: auto;
+  display: block;
+  flex-direction: row;
+}
+
+.dino2{
+  width: 30%;
+  display: grid;
+  margin: 0 auto 0;
+  padding-bottom: 200px;
+  justify-content: center;
+}
+.dino2 div img{
+  width: auto;
+  height: 300px;
+  margin: auto;
+  display: block;
+  flex-direction: column;
+}
+
+.dino3{
+  width: 30%;
+  display: grid;
+  margin: 0 auto 0;
+  padding-bottom: 200px;
+  justify-content: center;
+}
+.dino3 div img{
+  width: auto;
+  height: 300px;
+  margin: auto;
+  display: block;
+  flex-direction: row;
+}
+
+.sectiongaleria h1{
+  text-align: center;
+}
+.sectiongaleria p{
+  text-align: justify;
+}
+.sectiongaleria div div div{
+  overflow: hidden;
+}
+footer{
+  background: black;
+  text-align: justify;
+  color: black;
+  background-image: url(/img/plantilla2.png);
+}
+.section3{
+  width: 100%;
+  margin: 0 auto 0;
+  justify-content: center;
+}
+.aprende{
+  padding: 30px;
+  text-align: center;
+  text-shadow: 1px 1px 3px grey;
+}
+.responsive{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-width: 300px;
+  margin: 0 auto 0;
+  gap: 3em;
+  padding: 40px;
+}
+.responsive div{
+  display: block;
+  width: 35%;
+  height: 17000;
+  margin: auto;
+  min-width: 300px;
+}
+.responsive div iframe{
+  display: block;
+  margin: auto;
+  width: auto;
+  height: auto;
+}
+.section1{
+  z-index: 1;
+}
+.menu{
+  z-index: 1;
+}
+.submenu{
+  z-index: 1;
+}
+.asda{
+  z-index: 1;
+}
